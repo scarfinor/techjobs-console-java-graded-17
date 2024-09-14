@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.Map;
+import java.util.Objects;
 import java.util.Scanner;
 
 /**
@@ -119,9 +119,8 @@ public class TechJobs {
 
     // Print a list of jobs
     private static void printJobs(ArrayList<HashMap<String, String>> someJobs) {
-            if (someJobs == null) {
-                System.out.println("No Results");
-                return;
+            if (someJobs.isEmpty()) {
+                System.out.print("No Results");
             }
             for (HashMap<String, String> job : someJobs) {
                 System.out.println("\n" + "*****");
